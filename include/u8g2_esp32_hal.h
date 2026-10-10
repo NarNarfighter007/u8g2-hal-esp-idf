@@ -24,7 +24,7 @@
 
 #define U8G2_ESP32_HAL_UNDEFINED GPIO_NUM_NC
 
-#if SOC_I2C_NUM > 1
+#if SOC_I2C_NUM > 1 && defined(U8G2_ESP32_HAL_USE_V2_I2C_API)
 #define I2C_MASTER_NUM I2C_NUM_1     //  I2C port number for master dev
 #else
 #define I2C_MASTER_NUM I2C_NUM_0     //  I2C port number for master dev
